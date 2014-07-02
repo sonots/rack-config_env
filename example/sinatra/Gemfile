@@ -1,0 +1,6 @@
+source "http://rubygems.org"
+
+gem 'sinatra'
+gem 'rack-config_env', path: '../..'
+gem 'pry'
+gem 'pry-nav'
