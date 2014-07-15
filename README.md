@@ -31,8 +31,9 @@ require 'logger'
 require 'rack-config_env'
 
 class Application < Rails::Application
-  config.autoload_paths += %W(#{config.root}/lib)
-  config.middleware.insert_after(0, Rack::ConfigEnv, { 'action_dispatch.logger' => Logger.new(STDOUT) })
+  config.middleware.insert_after(0, Rack::ConfigEnv, {
+    'action_dispatch.logger' => Logger.new(STDOUT)
+  })
 end
 ```
 
